@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandra Saputra | Dark Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d 70%);
+  color:white;
+}
+
+/* Glow background effect */
+body::before{
+  content:'';
+  position:absolute;
+  width:600px;
+  height:600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%); 
+  z-index:0;
+}
+
+.container{
+  position:relative;
+  z-index:1;
+  max-width:700px;
+  padding:20px;
+}
+
+/* Profile */
+.profile{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  margin:0 auto 25px;
+  background:url('https://i.imgur.com/1ADDQqX.jpeg') center/cover;
+  border:2px solid #d4af37;
+  box-shadow:0 0 25px rgba(212,175,55,0.3);  
+}
+
+/* Text */
+h1{
+  font-size:2.3rem;
+  font-weight:700;
+}
+
+h1 span{
+  background: linear-gradient(90deg, #d4af37, #f5d76e); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  transition:0.3s; 
+}
+h1 span:hover{
+  text-shadow:0 0 8px rgba(212,175,55,0.25);
+}
+p{
+  margin-top:10px;
+  opacity:0.8;
+}
+
+.subtitle{
+  margin-top:15px;
+  font-style:italic;
+  opacity:0.6;
+}
+
+/* Button */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  background:#111; 
+  color:#d4af37; 
+  border:1px solid #d4af37; 
+  transition:0.3s ease;
+} 
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(255,255,255,0.15);
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 30px rgba(99,102,241,1);
+}
+
+/* Social */
+.social{
+  margin-top:30px;
+}
+
+.social a{
+  margin:0 15px;
+  text-decoration:none;
+  color:white;
+  opacity:0.6;
+  transition:0.3s;
+}
+
+.social a:hover{
+  opacity:1;
+  color:#60a5fa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="profile"></div>
+
+<h1>Hi, I'm <span>Chandra Saputra</span> 👋</h1>
+<p>Web Developer • UI/UX Enthusiast • Enginer</p>
+<p class="subtitle"><span id="typing"></span></p>
+
+<a href="#" class="btn">Let's Work Together</a>
+
+<div class="social">
+<a href="https://www.instagram.com/notyourchndrz" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/cogannz" target="_blank">Facebook</a> 
+<div style="margin-top:60px;">
+  <h2>About Me</h2>
+  <p style="opacity:0.7;">
+    Passionate about building clean and modern web experiences.
+    Always learning. Always improving.
+  </p>
+</div>
+</div>
+
+</div>
+<script>
+const text = "Turning ideas into clean and meaningful digital products";
+let i = 0;
+function typing(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+typing();
+</script>
+</body>
+</html>
