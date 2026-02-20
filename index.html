@@ -29,18 +29,19 @@ body::before{
   position:absolute;
   width:600px;
   height:600px;
-  background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%); 
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  background: radial-gradient(circle, rgba(212,175,55,0.08), transparent 70%);
   z-index:0;
 }
-
 .container{
   position:relative;
   z-index:1;
-  max-width:700px;
-  padding:20px; 
+  max-width:1000px;
+  padding:20px;
   margin:0 auto;
 }
-
 /* Profile */
 .profile{
   width:130px;
@@ -87,6 +88,116 @@ p{
   text-decoration:none;
   font-weight:600;
   background:#111; 
+  color:#d4af37; 
+  border:1px solid #d4af37; 
+  transition:0.3s ease;
+} 
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(255,255,255,0.15);
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 30px rgba(99,102,241,1);
+}
+
+/* Social */
+.social{
+  margin-top:30px;
+}
+
+.social a{
+  margin:0 15px;
+  text-decoration:none;
+  color:white;
+  opacity:0.6;
+  transition:0.3s;
+}
+
+.social a:hover{
+  opacity:1;
+  color:#60a5fa;
+} 
+.gallery{
+  padding:80px 20px;
+}
+
+.gallery h2{
+  font-size:2rem;
+  margin-bottom:30px;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  gap: 20px;
+  justify-content: center;
+}
+.gallery-grid img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.gallery-grid img:hover{
+  transform:scale(1.05);
+} 
+html{
+  scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile"></div>
+
+<h1>Hi, I'm <span>Chandra Saputra</span> 👋</h1>
+<p>Web Developer • UI/UX Enthusiast • Enginer</p>
+<p class="subtitle"><span id="typing"></span></p>
+
+<a href="#contact" class="btn">Gas Collab 🚀</a>
+<div class="social">
+  <a href="https://www.instagram.com/notyourchndrz" target="_blank">
+    <i class="fa-brands fa-instagram"></i> Instagram
+  </a>
+
+  <a href="https://www.facebook.com/cogannz" target="_blank">
+    <i class="fa-brands fa-facebook"></i> Facebook
+  </a>
+</div>
+
+</div> 
+<section class="gallery">
+  <h2>My Gallery</h2>
+  <div class="gallery-grid"> 
+  <img src="IMG-20260215-WA0210.jpg">
+<img src="IMG-20260215-WA0185.jpg">
+<img src="IMG-20260214-WA0246.jpg">
+<img src="IMG-20260215-WA0035.jpg">
+  </div>
+</section>
+<h2>About Me</h2>
+<p style="opacity:0.7;">
+Gak butuh panggung.
+Yang penting nyata.
+Karena drama cuma buat yang gak punya hasil.
+</p>
+<script>
+const text = "Banyak gaya, sedikit karya.";
+let i = 0;
+function typing(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+typing();
+</script>
+</body>
+</html>  background:#111; 
   color:#d4af37; 
   border:1px solid #d4af37; 
   transition:0.3s ease;
