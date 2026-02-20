@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chandra Saputra | Dark Portfolio</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -16,13 +16,11 @@
 }
 
 body{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  min-height:100vh; 
   text-align:center;
   background: radial-gradient(circle at top, #1a1a1a, #0d0d0d 70%);
   color:white;
+  overflow-x:hidden;
 }
 
 /* Glow background effect */
@@ -39,7 +37,8 @@ body::before{
   position:relative;
   z-index:1;
   max-width:700px;
-  padding:20px;
+  padding:20px; 
+  margin:0 auto;
 }
 
 /* Profile */
@@ -118,13 +117,57 @@ p{
 .social a:hover{
   opacity:1;
   color:#60a5fa;
+} 
+.gallery{
+  padding:80px 20px;
+}
+
+.gallery h2{
+  font-size:2rem;
+  margin-bottom:30px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  width:100%;
+  border-radius:15px; 
+  transition:0.4s ease;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+} 
+.gallery{
+  padding:100px 20px;
+}
+
+.gallery h2{
+  font-size:2.5rem;
+  margin-bottom:50px;
+}
+
+.gallery-grid img{
+  height:250px;
+  object-fit:cover;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.07);
+  box-shadow:0 20px 40px rgba(212,175,55,0.3);
+  
+} 
+html{
+  scroll-behavior:smooth;
 }
 </style>
 </head>
 
 <body>
-
-<div class="container">
 
 <div class="profile"></div>
 
@@ -132,23 +175,35 @@ p{
 <p>Web Developer • UI/UX Enthusiast • Enginer</p>
 <p class="subtitle"><span id="typing"></span></p>
 
-<a href="#" class="btn">Let's Work Together</a>
-
+<a href="#contact" class="btn">Gas Collab 🚀</a>
 <div class="social">
-<a href="https://www.instagram.com/notyourchndrz" target="_blank">Instagram</a>
-<a href="https://www.facebook.com/cogannz" target="_blank">Facebook</a> 
-<div style="margin-top:60px;">
-  <h2>About Me</h2>
-  <p style="opacity:0.7;">
-    Passionate about building clean and modern web experiences.
-    Always learning. Always improving.
-  </p>
-</div>
+  <a href="https://www.instagram.com/notyourchndrz" target="_blank">
+    <i class="fa-brands fa-instagram"></i> Instagram
+  </a>
+
+  <a href="https://www.facebook.com/cogannz" target="_blank">
+    <i class="fa-brands fa-facebook"></i> Facebook
+  </a>
 </div>
 
-</div>
+</div> 
+<section class="gallery">
+  <h2>My Gallery</h2>
+  <div class="gallery-grid"> 
+  <img src="IMG-20260215-WA0210.jpg">
+<img src="IMG-20260215-WA0185.jpg">
+<img src="IMG-20260214-WA0246.jpg">
+<img src="IMG-20260215-WA0035.jpg">
+  </div>
+</section>
+<h2>About Me</h2>
+<p style="opacity:0.7;">
+Gak butuh panggung.
+Yang penting nyata.
+Karena drama cuma buat yang gak punya hasil.
+</p>
 <script>
-const text = "Turning ideas into clean and meaningful digital products";
+const text = "Banyak gaya, sedikit karya.";
 let i = 0;
 function typing(){
   if(i < text.length){
