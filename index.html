@@ -1,249 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Altitude Journal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chandra — Kritik & Code</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --text: #e0e0e0;
+      --muted: #a0a0a0;
+      --red: #c1121f;
+      --gold: #d4a017;
+      --gold-gradient: linear-gradient(135deg, #d4a017 0%, #b8860b 50%, #a67c00 100%);
+      --border: #222222;
+      --shadow-red: rgba(193, 18, 31, 0.25);
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    * { margin:0; padding:0; box-sizing:border-box; }
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Sora', sans-serif;
-}
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
 
-body{
-  background:#111111;
-  color:white;
-  overflow-x:hidden;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* NAVBAR */
-nav{
-  position:fixed;
-  width:100%;
-  top:0;
-  display:flex;
-  justify-content:space-between;
-  padding:20px 40px;
-  backdrop-filter:blur(10px);
-  background:rgba(0,0,0,0.4);
-  z-index:1000;
-}
+    header {
+      text-align: center;
+      padding: 100px 0 60px;
+      background: linear-gradient(135deg, rgba(193,18,31,0.08) 0%, rgba(212,175,55,0.03) 100%);
+    }
 
-nav h2{
-  font-weight:600;
-  letter-spacing:1px;
-}
+    .profile-wrapper {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 1.5rem;
+    }
 
-.menu-btn{
-  cursor:pointer;
-  font-size:22px;
-}
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid transparent;
+      background: var(--gold-gradient) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      box-shadow: 0 10px 30px var(--shadow-red);
+    }
 
-.menu{
-  position:fixed;
-  top:0;
-  right:-300px;
-  width:300px;
-  height:100vh;
-  background:#1a1a1a;
-  padding:80px 30px;
-  transition:0.4s ease;
-  display:flex;
-  flex-direction:column;
-  gap:30px;
-}
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      background: var(--red);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.4rem;
+    }
 
-.menu a{
-  text-decoration:none;
-  color:white;
-  font-size:18px;
-  transition:0.3s;
-}
+    .tagline {
+      font-size: 1.3rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
 
-.menu a:hover{
-  color:#d4af37;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+      padding: 1rem 0;
+    }
 
-.menu.active{
-  right:0;
-}
+    nav .container {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
 
-/* HERO */
-.hero{
-  padding:160px 20px 100px;
-  text-align:center;
-}
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-.profile-frame{
-  width:200px;
-  height:200px;
-  margin:auto;
-  border-radius:50%;
-  overflow:hidden;
-  border:3px solid #d4af37;
-  box-shadow:0 20px 50px rgba(212,175,55,0.3);
-}
+    nav a:hover { color: var(--red); }
 
-.profile-frame img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+    section { padding: 80px 0; }
 
-.hero h1{
-  margin-top:30px;
-  font-size:36px;
-  background:linear-gradient(90deg,#fff,#d4af37);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: var(--red);
+    }
 
-.hero p{
-  margin-top:15px;
-  opacity:0.6;
-}
+    /* Gallery kecil & padat */
+    .gallery-grid {
+      column-count: 6;
+      column-gap: 0.8rem;
+      width: 100%;
+    }
 
-/* SOCIAL ICONS */
-.social{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-}
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 0.8rem;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: all 0.4s;
+    }
 
-.social a{
-  width:45px;
-  height:45px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(10px);
-  transition:0.4s ease;
-}
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px var(--shadow-red);
+    }
 
-.social a:hover{
-  background:#d4af37;
-  transform:translateY(-5px) scale(1.1);
-  box-shadow:0 10px 30px rgba(212,175,55,0.4);
-}
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-.social svg{
-  width:22px;
-  height:22px;
-  fill:white;
-}
+    .about-text {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.22rem;
+      color: var(--muted);
+      text-align: left;
+    }
 
-/* GRID */
-.gallery{
-  max-width:1100px;
-  margin:100px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
+    .about-text p {
+      margin-bottom: 1.8rem;
+    }
 
-.card{
-  position:relative;
-  overflow:hidden;
-  border-radius:20px;
-  transition:0.5s ease;
-}
+    .about-text strong {
+      color: var(--red);
+      font-weight: 600;
+    }
 
-.card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.8s ease;
-  filter:brightness(0.85);
-}
+    .contact-links a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.card:hover img{
-  transform:scale(1.1);
-  filter:brightness(1);
-}
+    .contact-links a:hover {
+      color: var(--red);
+      text-decoration: underline;
+    }
 
-.card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
-}
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s ease-out;
+    }
 
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 60px rgba(212,175,55,0.2);
-}
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:60px;
-  opacity:0.5;
-}
-</style>
+    footer {
+      text-align: center;
+      padding: 100px 0 160px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    @media (max-width: 1200px) { .gallery-grid { column-count: 5; } }
+    @media (max-width: 900px)  { .gallery-grid { column-count: 4; } }
+    @media (max-width: 600px)  { .gallery-grid { column-count: 3; } }
+    @media (max-width: 400px)  { .gallery-grid { column-count: 2; } }
+  </style>
 </head>
-
 <body>
 
-<nav>
-  <h2>The Ascent</h2>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-</nav>
+  <nav>
+    <div class="container">
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<div class="menu" id="menu">
-  <a href="#">Home</a>
-  <a href="#">Stories</a>
-  <a href="#">Gallery</a>
-  <a href="#">Contact</a>
-</div>
+  <header id="home" class="fade-in">
+    <div class="container">
+      <div class="profile-wrapper">
+        <img src="https://IMG-20260215-WA0035.jpg" alt="Chandra" class="profile-pic">
+      </div>
+      <h1>chndrz</h1>
+      <div class="tagline">Code Clean. Kritik Tajam. Sistem Busuk.</div>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="profile-frame">
-    <img src="IMG-20260214-WA0206.jpg">
-  </div>
+  <section id="gallery">
+    <div class="container">
+      <h2 class="fade-in">Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in"><img src="1.jpg" alt=""></div>
+        <div class="gallery-item fade-in"><img src="2.jpg" alt=""></div>
+        <div class="gallery-item fade-in"><img src="3.jpg" alt=""></div>
+        <div class="gallery-item fade-in"><img src="4.jpg" alt=""></div>
+        <div class="gallery-item fade-in"><img src="5.jpg" alt=""></div>
+        <div class="gallery-item fade-in"><img src="6.jpg" alt=""></div>
+        <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt=""></div>
+        <!-- tambah foto kalau mau, tetap kecil -->
+      </div>
+    </div>
+  </section>
 
-  <h1>notyourchndrz</h1>
-  <p>jng lupa follow</p>
+  <section id="about" style="background: var(--surface);">
+    <div class="container">
+      <h2 class="fade-in">About</h2>
+      <div class="about-text fade-in">
+        <p>Frontend developer yang masih punya harapan UI/UX harus cepat, mulus, dan berguna — tapi nyatanya aplikasi pemerintah lebih mirip lelucon buruk: loading 30 detik untuk halaman login, error 500 pas mau lapor, dan desain yang terakhir di-update tahun 2010.</p>
 
-  <div class="social">
-    <a href="https://instagram.com/notyourchndrz" target="_blank">
-      <svg viewBox="0 0 24 24">
-        <path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6-2a1 1 0 110 2 1 1 0 010-2z"/>
-      </svg>
-    </a>
+        <p>APBN triliunan raib tiap tahun, tapi infrastruktur digital negara masih kayak warnet tahun 2005. Website resmi kementerian penuh banner iklan judi online, link mati, dan pop-up "Under Maintenance" yang nggak pernah selesai. Ironi negara yang katanya maju, tapi website e-KTP-nya masih crash pas masa pendaftaran.</p>
 
-    <a href="https://www.facebook.com/cogannz" target="_blank">
-      <svg viewBox="0 0 24 24">
-        <path d="M13 3h4V0h-4c-3 0-5 2-5 5v3H5v4h3v12h5V12h4l1-4h-5V5c0-1 .5-2 2-2z"/>
-      </svg>
-    </a>
-  </div>
-</section>
+        <p>Korupsi berjamaah sudah jadi olahraga nasional: OTT KPK cuma jadi drama tahunan, tersangka bebas lagi, duit negara balik ke kantong pribadi, rakyat cuma dapat tagihan pajak dan janji kosong. Bansos cair telat, bansos salah sasaran, bansos malah masuk ke rekening pejabat. Sistemnya rusak dari akar, tapi yang disalahkan malah rakyat yang protes.</p>
 
-<section class="gallery">
-  <div class="card"><img src="IMG-20260215-WA0210.jpg"></div>
-  <div class="card"><img src="IMG-20260215-WA0185.jpg"></div>
-  <div class="card"><img src="IMG-20260215-WA0084.jpg"></div>
-  <div class="card"><img src="IMG-20260215-WA0035.jpg"></div>
-</section>
+        <p>Janji kampanye: "Indonesia Emas 2045". Realitas: emasnya raib, yang tersisa cuma janji palsu dan utang negara yang membengkak. Pajak kita dipakai buat beli jet pribadi pejabat, bukan buat sekolah atau rumah sakit. Kode gue lebih transparan dan jujur daripada anggaran negara.</p>
 
-<footer>
-  © 2025 chandra saputra
-</footer>
+        <p>Hobi utama sekarang: ngoding sambil scroll berita korupsi, karena kritik pemerintah lebih murah daripada bayar PPN 11% buat dana pensiun DPR yang nggak pernah kerja beneran.</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
-}
-</script>
+  <section id="contact">
+    <div class="container" style="text-align: center;">
+      <h2 class="fade-in">Contact</h2>
+      <p class="fade-in" style="font-size: 1.18rem; color: var(--muted);">
+        Email: <a href="mailto:emailkamu@gmail.com" class="contact-links">notyourchndrz@gmail.com</a><br><br>
+        <span class="contact-links">
+          <a href="https://www.instagram.com/notyourchndrz?">Instagram</a> • 
+          <a href="https://github.com/chndrz">GitHub</a> • 
+          <a href="https://x.com/[username]">X</a>
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <div class="container">
+      <p>© 2026 chndrz • "Negara ini bukan lagi rumah rakyat. Ini cuma ATM buat segelintir orang yang pakai baju dinas."</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
