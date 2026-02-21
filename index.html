@@ -44,26 +44,20 @@
     }
 
     .profile-wrapper {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto 1.5rem;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      overflow: hidden;
-    }
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--gold-gradient);
+}
 
-    .profile-pic {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid transparent;
-      background: var(--gold-gradient) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      box-shadow: 0 10px 30px var(--shadow-red);
-    }
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
     h1 {
       font-family: 'Playfair Display', serif;
@@ -208,7 +202,7 @@
   <header id="home" class="fade-in">
     <div class="container">
       <div class="profile-wrapper">
-        <img src="https://raw.githubusercontent.com/chndrz/chndrz.github.io/main/anda.jpg" alt="chndrz" class="profile-pic">
+        <img src="anda.jpg" alt="chndrz" class="profile-pic">
       </div>
       <h1>chndrz</h1>
       <div class="tagline">Code Clean. Kritik Tajam. Sistem Busuk.</div>
