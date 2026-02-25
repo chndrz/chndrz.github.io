@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahaya Firman | Ayat Alkitab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Playfair Display', serif; }
+    .verse { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-[#f8f7f4] text-slate-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">✝️</span>
+        <div>
+          <h1 class="heading text-2xl font-bold text-[#1e3a8a]">Cahaya Firman</h1>
+          <p class="text-xs text-slate-500 -mt-1">Blog Rohani Chndrz</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+        <a href="ayat.html" class="hover:text-[#d4af37] transition text-[#d4af37]">Ayat</a>
+        <a href="renungan.html" class="hover:text-[#d4af37] transition">Renungan</a>
+        <a href="khotbah.html" class="hover:text-[#d4af37] transition">Khotbah</a>
+        <a href="doa.html" class="hover:text-[#d4af37] transition">Doa</a>
+        <a href="kontak.html" class="hover:text-[#d4af37] transition">Contact</a>
+      </nav>
+      <button onclick="toggleMobileMenu()" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-b px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+    <a href="index.html">Home</a>
+    <a href="ayat.html">Ayat</a>
+    <a href="renungan.html">Renungan</a>
+    <a href="khotbah.html">Khotbah</a>
+    <a href="doa.html">Doa</a>
+    <a href="kontak.html">Contact</a>
+  </div>
+
+  <!-- MAIN -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <h1 class="heading text-5xl text-[#1e3a8a] mb-12 text-center">Koleksi Ayat Alkitab</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengaruniakan Anak-Nya yang tunggal, supaya setiap orang yang percaya kepada-Nya tidak binasa, melainkan beroleh hidup yang kekal."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Yohanes 3:16</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"TUHAN adalah gembalaku, aku tidak akan kekurangan."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Mazmur 23:1</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Segala sesuatu dapat kutanggung di dalam Dia yang memberi kekuatan kepadaku."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Filipi 4:13</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Janganlah takut, sebab Aku menyertai engkau; janganlah bimbang, sebab Aku ini Allahmu. Aku akan meneguhkan, bahkan menolong engkau; Aku akan memegang engkau dengan tangan kanan-Ku yang membawa kemenangan."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Yesaya 41:10</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Kita tahu sekarang, bahwa Allah turut bekerja dalam segala sesuatu untuk mendatangkan kebaikan bagi mereka yang mengasihi Dia."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Roma 8:28</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Firman-Mu adalah pelita bagi kakiku dan terang bagi jalanku."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Mazmur 119:105</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Tetapi carilah dahulu Kerajaan Allah dan kebenarannya, maka semuanya itu akan ditambahkan kepadamu."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Matius 6:33</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Akulah jalan dan kebenaran dan hidup. Tidak ada seorangpun yang datang kepada Bapa, kalau tidak melalui Aku."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Yohanes 14:6</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Tetapi buah Roh ialah: kasih, sukacita, damai sejahtera, kesabaran, kemurahan, kebaikan, kesetiaan, kelemahlembutan, penguasaan diri."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Galatia 5:22-23</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Sebab itu, jika seorang ada di dalam Kristus, ia adalah ciptaan baru: yang lama sudah berlalu, sesungguhnya yang baru sudah datang."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- 2 Korintus 5:17</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Sebab karena kasih karunia kamu diselamatkan oleh iman; itu bukan hasil usahamu, tetapi pemberian Allah, itu bukan hasil pekerjaanmu: jangan ada orang yang memegahkan diri."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Efesus 2:8-9</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Sebab Aku ini tahu rancangan-rancangan apa yang ada pada-Ku mengenai kamu, demikianlah firman TUHAN, yaitu rancangan damai sejahtera dan bukan rancangan kecelakaan, untuk memberikan kepadamu hari depan yang penuh harapan."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Yeremia 29:11</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Allah adalah tempat perlindungan dan kekuatan kita, suatu pertolongan yang nyata dalam kesesakan."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Mazmur 46:1</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Serahkanlah segala kekuatiranmu kepada-Nya, sebab Ia yang memelihara kamu."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- 1 Petrus 5:7</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Aku sekali-kali tidak akan membiarkan engkau dan Aku sekali-kali tidak akan meninggalkan engkau."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Ibrani 13:5</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Sebab itu janganlah kamu kuatir akan hari besok, karena hari besok mempunyai kekuatirannya sendiri."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Matius 6:34</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Kasihilah Tuhan, Allahmu, dengan segenap hatimu dan dengan segenap jiwamu dan dengan segenap akal budimu."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Matius 22:37</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Bersukacitalah senantiasa dalam Tuhan! Sekali lagi kukatakan: Bersukacitalah!"</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Filipi 4:4</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Karena itu, saudara-saudaraku yang kekasih, berdirilah teguh, jangan goyah, dan giatlah selalu dalam pekerjaan Tuhan!"</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- 1 Korintus 15:58</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition border border-transparent hover:border-[#d4af37]">
+        <p class="verse italic text-xl leading-relaxed">"Janganlah kamu menjadi serupa dengan dunia ini, tetapi berubahlah oleh pembaharuan budimu, sehingga kamu dapat membedakan manakah kehendak Allah: apa yang baik, yang berkenan kepada Allah dan yang sempurna."</p>
+        <p class="text-right mt-6 text-[#1e3a8a] font-medium">- Roma 12:2</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1e3a8a] text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p>&copy; 2026 Cahaya Firman • Dibuat dengan ❤️ oleh @chndrz</p>
+      <p class="text-xs text-slate-400 mt-2">Segala kemuliaan bagi Tuhan Yesus Kristus</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
