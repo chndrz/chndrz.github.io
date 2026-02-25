@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahaya Firman | Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Playfair Display', serif; }
+    .verse { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-[#f8f7f4] text-slate-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">✝️</span>
+        <div>
+          <h1 class="heading text-2xl font-bold text-[#1e3a8a]">Cahaya Firman</h1>
+          <p class="text-xs text-slate-500 -mt-1">Blog Rohani Chndrz</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+        <a href="ayat.html" class="hover:text-[#d4af37] transition">Ayat</a>
+        <a href="renungan.html" class="hover:text-[#d4af37] transition">Renungan</a>
+        <a href="khotbah.html" class="hover:text-[#d4af37] transition">Khotbah</a>
+        <a href="doa.html" class="hover:text-[#d4af37] transition">Doa</a>
+        <a href="kontak.html" class="hover:text-[#d4af37] transition text-[#d4af37]">Contact</a>
+      </nav>
+      <button onclick="toggleMobileMenu()" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-b px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+    <a href="index.html">Home</a>
+    <a href="ayat.html">Ayat</a>
+    <a href="renungan.html">Renungan</a>
+    <a href="khotbah.html">Khotbah</a>
+    <a href="doa.html">Doa</a>
+    <a href="kontak.html">Contact</a>
+  </div>
+
+  <!-- MAIN -->
+  <main class="max-w-2xl mx-auto px-6 py-20 text-center">
+    <h1 class="heading text-5xl text-[#1e3a8a] mb-6">Mari Terhubung</h1>
+    <p class="text-lg text-slate-600 mb-12">Ikuti perjalanan rohani Chndrz di media sosial untuk update renungan, ayat, dan khotbah terbaru.</p>
+    
+    <div class="flex flex-col gap-6 max-w-xs mx-auto">
+      <a href="https://instagram.com/notyourchndrz" target="_blank" class="flex items-center gap-5 bg-white hover:bg-pink-50 border border-slate-200 hover:border-pink-300 p-6 rounded-3xl transition">
+        <i class="fab fa-instagram text-5xl text-pink-600"></i>
+        <div class="text-left">
+          <p class="font-medium">Instagram</p>
+          <p class="text-sm text-slate-500">@notyourchndrz</p>
+        </div>
+      </a>
+      
+      <a href="https://facebook.com/cogaanz" target="_blank" class="flex items-center gap-5 bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-300 p-6 rounded-3xl transition">
+        <i class="fab fa-facebook text-5xl text-blue-600"></i>
+        <div class="text-left">
+          <p class="font-medium">Facebook</p>
+          <p class="text-sm text-slate-500">@cogaanz</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/chndrz" target="_blank" class="flex items-center gap-5 bg-white hover:bg-slate-100 border border-slate-200 hover:border-slate-400 p-6 rounded-3xl transition">
+        <i class="fab fa-github text-5xl text-slate-700"></i>
+        <div class="text-left">
+          <p class="font-medium">GitHub</p>
+          <p class="text-sm text-slate-500">@chndrz</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1e3a8a] text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p>&copy; 2026 Cahaya Firman • Dibuat oleh @chndrz</p>
+      <p class="text-xs text-slate-400 mt-2">Segala kemuliaan bagi Tuhan Yesus Kristus</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

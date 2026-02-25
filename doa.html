@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahaya Firman | Doa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Playfair Display', serif; }
+    .verse { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-[#f8f7f4] text-slate-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">✝️</span>
+        <div>
+          <h1 class="heading text-2xl font-bold text-[#1e3a8a]">Cahaya Firman</h1>
+          <p class="text-xs text-slate-500 -mt-1">Blog Rohani Chndrz</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+        <a href="ayat.html" class="hover:text-[#d4af37] transition">Ayat</a>
+        <a href="renungan.html" class="hover:text-[#d4af37] transition">Renungan</a>
+        <a href="khotbah.html" class="hover:text-[#d4af37] transition">Khotbah</a>
+        <a href="doa.html" class="hover:text-[#d4af37] transition text-[#d4af37]">Doa</a>
+        <a href="kontak.html" class="hover:text-[#d4af37] transition">Contact</a>
+      </nav>
+      <button onclick="toggleMobileMenu()" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-b px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+    <a href="index.html">Home</a>
+    <a href="ayat.html">Ayat</a>
+    <a href="renungan.html">Renungan</a>
+    <a href="khotbah.html">Khotbah</a>
+    <a href="doa.html">Doa</a>
+    <a href="kontak.html">Contact</a>
+  </div>
+
+  <!-- MAIN -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <h1 class="heading text-5xl text-[#1e3a8a] mb-12 text-center">Doa Harian</h1>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white p-10 rounded-3xl shadow">
+        <h3 class="text-2xl font-medium text-[#1e3a8a] mb-6 flex items-center gap-3"><i class="fas fa-shield-alt text-[#d4af37]"></i> Doa untuk Menguatkan Diri</h3>
+        <div class="space-y-4 text-slate-700 leading-relaxed">
+          <p>Tuhan Yesus Kristus, Engkau adalah gunung pertahananku dan sumber kekuatanku. Di saat aku merasa lemah dan putus asa, ingatkanlah aku akan janji-Mu dalam Filipi 4:13 bahwa aku dapat menanggung segala sesuatu di dalam Engkau yang memberi kekuatan.</p>
+          <p>Kuatkanlah hatiku, Tuhan, agar aku tidak goyah di tengah cobaan. Hilangkanlah rasa takut dan kekuatiran, gantilah dengan damai sejahtera-Mu yang melampaui akal. Ajarilah aku untuk bergantung sepenuhnya kepada-Mu, bukan kepada kekuatanku sendiri.</p>
+          <p>Terima kasih untuk kasih-Mu yang tak pernah gagal. Dalam nama Yesus, aku berdoa. Amin.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-10 rounded-3xl shadow">
+        <h3 class="text-2xl font-medium text-[#1e3a8a] mb-6 flex items-center gap-3"><i class="fas fa-sun text-[#d4af37]"></i> Doa Pagi</h3>
+        <div class="space-y-4 text-slate-700 leading-relaxed">
+          <p>Bapa Surgawi yang mahakasih, terima kasih untuk napas kehidupan baru di pagi hari ini. Seperti Mazmur 118:24 katakan, "Inilah hari yang dijadikan TUHAN, marilah kita bersorak-sorak dan bersukacita karenanya."</p>
+          <p>Terangi langkahku hari ini dengan Firman-Mu. Lindungilah aku dari segala bahaya, dan jadikanlah aku berkat bagi orang lain. Berikanlah kebijaksanaan dalam pekerjaan, kesabaran dalam ujian, dan sukacita dalam pelayanan.</p>
+          <p>Semoga hari ini aku hidup untuk kemuliaan-Mu. Dalam nama Yesus Kristus, Amin.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-10 rounded-3xl shadow">
+        <h3 class="text-2xl font-medium text-[#1e3a8a] mb-6 flex items-center gap-3"><i class="fas fa-moon text-[#d4af37]"></i> Doa Malam</h3>
+        <div class="space-y-4 text-slate-700 leading-relaxed">
+          <p>Tuhan yang baik, hari ini telah berlalu dengan segala berkat-Mu. Ampuni segala dosa dan kesalahan yang kulakukan, baik yang disengaja maupun tidak. Seperti Mazmur 4:8, "Dengan tenteram aku mau membaringkan diri, lalu segera tidur, sebab hanya Engkaulah, ya TUHAN, yang membiarkan aku diam dengan aman."</p>
+          <p>Berikanlah istirahat yang damai malam ini, pulihkan tubuh dan jiwaku. Bangunkan aku esok pagi dengan kekuatan baru untuk melayani-Mu. Lindungi keluargaku dan orang-orang yang kukasihi.</p>
+          <p>Terima kasih untuk penyertaan-Mu. Dalam nama Yesus, Amin.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1e3a8a] text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p>&copy; 2026 Cahaya Firman • Dibuat oleh @chndrz</p>
+      <p class="text-xs text-slate-400 mt-2">Segala kemuliaan bagi Tuhan Yesus Kristus</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
