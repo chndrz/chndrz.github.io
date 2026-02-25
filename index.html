@@ -1,276 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>chndrz — Kritik & Code</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahaya Firman | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    :root {
-      --bg: #0a0a0a;
-      --surface: #111111;
-      --text: #e0e0e0;
-      --muted: #a0a0a0;
-      --red: #c1121f;
-      --gold: #d4a017;
-      --gold-gradient: linear-gradient(135deg, #d4a017 0%, #b8860b 50%, #a67c00 100%);
-      --border: #222222;
-      --shadow-red: rgba(193, 18, 31, 0.25);
-    }
-
-    * { margin:0; padding:0; box-sizing:border-box; }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 100px 0 60px;
-      background: linear-gradient(135deg, rgba(193,18,31,0.08) 0%, rgba(212,175,55,0.03) 100%);
-    }
-
-    .profile-wrapper {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  padding: 3px;
-  background: var(--gold-gradient);
-}
-
-.profile-pic {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      background: var(--red);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 0.4rem;
-    }
-
-    .tagline {
-      font-size: 1.3rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(10,10,10,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      z-index: 10;
-      padding: 1rem 0;
-    }
-
-    nav .container {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-    }
-
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover { color: var(--red); }
-
-    section { padding: 80px 0; }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      color: var(--red);
-    }
-
-    /* Gallery kecil & padat */
-    .gallery-grid {
-      column-count: 6;
-      column-gap: 0.8rem;
-      width: 100%;
-    }
-
-    .gallery-item {
-      break-inside: avoid;
-      margin-bottom: 0.8rem;
-      border-radius: 10px;
-      overflow: hidden;
-      background: var(--surface);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transition: all 0.4s;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px var(--shadow-red);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .about-text {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.22rem;
-      color: var(--muted);
-      text-align: left;
-    }
-
-    .about-text p {
-      margin-bottom: 1.8rem;
-    }
-
-    .about-text strong {
-      color: var(--red);
-      font-weight: 600;
-    }
-
-    .contact-links a {
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-links a:hover {
-      color: var(--red);
-      text-decoration: underline;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1.2s ease-out;
-    }
-
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    footer {
-      text-align: center;
-      padding: 100px 0 160px;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    @media (max-width: 1200px) { .gallery-grid { column-count: 5; } }
-    @media (max-width: 900px)  { .gallery-grid { column-count: 4; } }
-    @media (max-width: 600px)  { .gallery-grid { column-count: 3; } }
-    @media (max-width: 400px)  { .gallery-grid { column-count: 2; } }
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Playfair Display', serif; }
+    .verse { font-family: 'Playfair Display', serif; }
   </style>
 </head>
-<body>
+<body class="bg-[#f8f7f4] text-slate-800">
 
-  <nav>
-    <div class="container">
-      <a href="#home">Home</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <header id="home" class="fade-in">
-    <div class="container">
-      <div class="profile-wrapper">
-        <img src="anda.jpg" alt="chndrz" class="profile-pic">
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">✝️</span>
+        <div>
+          <h1 class="heading text-2xl font-bold text-[#1e3a8a]">Cahaya Firman</h1>
+          <p class="text-xs text-slate-500 -mt-1">Blog Rohani Chndrz</p>
+        </div>
       </div>
-      <h1>chndrz</h1>
-      <div class="tagline">Code Clean. Kritik Tajam. Sistem Busuk.</div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#d4af37] transition text-[#d4af37]">Home</a>
+        <a href="ayat.html" class="hover:text-[#d4af37] transition">Ayat</a>
+        <a href="renungan.html" class="hover:text-[#d4af37] transition">Renungan</a>
+        <a href="khotbah.html" class="hover:text-[#d4af37] transition">Khotbah</a>
+        <a href="doa.html" class="hover:text-[#d4af37] transition">Doa</a>
+        <a href="kontak.html" class="hover:text-[#d4af37] transition">Contact</a>
+      </nav>
+      <button onclick="toggleMobileMenu()" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
     </div>
   </header>
 
-  <section id="gallery">
-    <div class="container">
-      <h2 class="fade-in">Gallery</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item fade-in"><img src="1.jpeg" alt=""></div>
-        <div class="gallery-item fade-in"><img src="2.jpeg" alt=""></div>
-        <div class="gallery-item fade-in"><img src="3.jpeg" alt=""></div>
-        <div class="gallery-item fade-in"><img src="4.jpeg" alt=""></div>
-        <div class="gallery-item fade-in"><img src="5.jpeg" alt=""></div>
-        <div class="gallery-item fade-in"><img src="6.jpeg" alt=""></div>
-        <div class="gallery-item fade-in"><img src="1.jpeg" alt=""></div>
-        <!-- tambah foto kalau mau, tetap kecil -->
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-b px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+    <a href="index.html">Home</a>
+    <a href="ayat.html">Ayat</a>
+    <a href="renungan.html">Renungan</a>
+    <a href="khotbah.html">Khotbah</a>
+    <a href="doa.html">Doa</a>
+    <a href="kontak.html">Contact</a>
+  </div>
+
+  <!-- MAIN -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <div class="relative h-[600px] rounded-3xl overflow-hidden mb-16">
+      <img src="https://picsum.photos/id/1015/2000/1200" alt="Bible" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/80 to-transparent"></div>
+      <div class="absolute inset-0 flex items-center px-12">
+        <div class="max-w-lg text-white">
+          <p class="uppercase tracking-widest text-[#d4af37] text-sm mb-2">Selamat Datang di</p>
+          <h1 class="heading text-6xl font-bold leading-none mb-6">Cahaya Firman</h1>
+          <p class="text-xl mb-8">Blog rohani pribadi Chndrz untuk mengenal Yesus lebih dalam setiap hari. Mari tumbuh bersama dalam iman.</p>
+          <a href="renungan.html" class="bg-[#d4af37] hover:bg-amber-600 text-[#1e3a8a] font-semibold px-8 py-4 rounded-full transition">Baca Renungan Hari Ini</a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section id="about" style="background: var(--surface);">
-    <div class="container">
-      <h2 class="fade-in">About</h2>
-      <div class="about-text fade-in">
-        <p>Frontend developer yang masih punya harapan UI/UX harus cepat, mulus, dan berguna — tapi nyatanya aplikasi pemerintah lebih mirip lelucon buruk: loading 30 detik untuk halaman login, error 500 pas mau lapor, dan desain yang terakhir di-update tahun 2010.</p>
-
-        <p>APBN triliunan raib tiap tahun, tapi infrastruktur digital negara masih kayak warnet tahun 2005. Website resmi kementerian penuh banner iklan judi online, link mati, dan pop-up "Under Maintenance" yang nggak pernah selesai. Ironi negara yang katanya maju, tapi website e-KTP-nya masih crash pas masa pendaftaran.</p>
-
-        <p>Korupsi berjamaah sudah jadi olahraga nasional: OTT KPK cuma jadi drama tahunan, tersangka bebas lagi, duit negara balik ke kantong pribadi, rakyat cuma dapat tagihan pajak dan janji kosong. Bansos cair telat, bansos salah sasaran, bansos malah masuk ke rekening pejabat. Sistemnya rusak dari akar, tapi yang disalahkan malah rakyat yang protes.</p>
-
-        <p>Janji kampanye: "Indonesia Emas 2045". Realitas: emasnya raib, yang tersisa cuma janji palsu dan utang negara yang membengkak. Pajak kita dipakai buat beli jet pribadi pejabat, bukan buat sekolah atau rumah sakit. Kode gue lebih transparan dan jujur daripada anggaran negara.</p>
-
-        <p>Hobi utama sekarang: ngoding sambil scroll berita korupsi, karena kritik pemerintah lebih murah daripada bayar PPN 11% buat dana pensiun DPR yang nggak pernah kerja beneran.</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow">
+        <h3 class="text-[#d4af37] font-medium mb-2">Ayat Hari Ini</h3>
+        <p class="verse italic text-lg">"Karena begitu besar kasih Allah akan dunia ini..."</p>
+        <p class="text-right text-sm mt-4">- Yohanes 3:16</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow">
+        <h3 class="text-[#d4af37] font-medium mb-2">Renungan Terbaru</h3>
+        <p class="font-medium">Mengandalkan Tuhan di Tengah Badai Kehidupan</p>
+        <p class="text-xs text-slate-500 mt-2">26 Februari 2026</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow">
+        <h3 class="text-[#d4af37] font-medium mb-2">Ikuti Saya</h3>
+        <div class="flex gap-6 text-3xl text-slate-400">
+          <a href="https://instagram.com/notyourchndrz" target="_blank" class="hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/cogaanz" target="_blank" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/chndrz" target="_blank" class="hover:text-slate-700"><i class="fab fa-github"></i></a>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <section id="contact">
-    <div class="container" style="text-align: center;">
-      <h2 class="fade-in">Contact</h2>
-      <p class="fade-in" style="font-size: 1.18rem; color: var(--muted);">
-        Email: <a href="mailto:emailkamu@gmail.com" class="contact-links">notyourchndrz@gmail.com</a><br><br>
-        <span class="contact-links">
-          <a href="https://www.instagram.com/notyourchndrz?">Instagram</a> • 
-          <a href="https://github.com/chndrz">GitHub</a> • 
-          <a href="https://Facebook.com/cogaanz">Facebook</a>
-        </span>
-      </p>
-    </div>
-  </section>
-
-  <footer class="fade-in">
-    <div class="container">
-      <p>© 2026 chndrz • "Negara ini bukan lagi rumah rakyat. Ini cuma ATM buat segelintir orang yang pakai baju dinas."</p>
+  <!-- FOOTER -->
+  <footer class="bg-[#1e3a8a] text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p>&copy; 2026 Cahaya Firman • Dibuat dengan ❤️ oleh @chndrz</p>
+      <p class="text-xs text-slate-400 mt-2">Segala kemuliaan bagi Tuhan Yesus Kristus</p>
     </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
   </script>
-
 </body>
 </html>
